@@ -9,9 +9,5 @@ def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
 def produtos(request):
-    context = lista_produtos[0]
-    return HttpResponse(f"""
-                        <h1>{context.nome}</h1>
-                        <p>Preço: R${context.preco}</p>
-                        <p>Descrição: {context.descricao}</p>
-                        """)
+    context = lista_produtos[0].__dict__
+    return render(request, 'exibir.html', context)
