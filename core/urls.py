@@ -19,6 +19,7 @@ from django.urls import path, include
 from Appvenda.urls import urlpatterns as appvenda_urls
 
 urlpatterns = [
-   # path('admin/', admin.site.urls),
+   
+   path('admin/', admin.site.urls),
    path('', include(appvenda_urls)),
 ]

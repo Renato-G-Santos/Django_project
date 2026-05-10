@@ -1,0 +1,23 @@
+{% extends 'templet.html' %}
+
+<html>
+
+
+{% block content %}
+<br>
+<br>
+{% if nome is None %}
+    <p>Produto não encontrado</p>
+{% else %}
+{% endif %}
+    <h1>{{ nome}}</h1>
+<p>Preço: R${{ preco}}</p>
+<p>Descrição: {{ descricao}}</p>
+{% endblock%}
+
+
+
+
+
+
+</html>
