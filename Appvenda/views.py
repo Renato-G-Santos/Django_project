@@ -10,7 +10,7 @@ def index(request):
 
 def produtos(request):
     produtos = produto.objects.all()
-    produtos = get_list_or_404(produto)
+
     context = {'produtos': produtos}
     return render(request, 'exibir.html', context)
     
