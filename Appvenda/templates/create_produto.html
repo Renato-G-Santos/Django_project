@@ -1,0 +1,17 @@
+{% extends 'template.html' %}
+{% load static %}
+
+{% block content %}
+
+<br>
+<br>
+<form action="{% url 'create_produto' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Criar Produto</button>
+
+</form>
+
+
+
+{% endblock %}

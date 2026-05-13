@@ -1,23 +1,9 @@
-{% extends 'templet.html' %}
-
-<html>
+{% extends 'template.html' %}
 
 
 {% block content %}
-<br>
-<br>
-{% if nome is None %}
-    <p>Produto não encontrado</p>
-{% else %}
-{% endif %}
-    <h1>{{ nome}}</h1>
-<p>Preço: R${{ preco}}</p>
-<p>Descrição: {{ descricao}}</p>
+
+<button><a href="{% url 'create_produto' %}">Criar Produto</a></button>
+
+
 {% endblock%}
-
-
-
-
-
-
-</html>
