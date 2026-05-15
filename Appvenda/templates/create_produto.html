@@ -5,13 +5,13 @@
 
 <br>
 <br>
-<form action="{% url 'create_produto' %}" method="post">
+<form action="{% url 'create_product' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Criar Produto</button>
 
 </form>
 
-
+<button><a href="{% url 'display_products' %}">ver produtos</a></button>
 
 {% endblock %}
